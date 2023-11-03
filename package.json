@@ -1,0 +1,10 @@
+{
+  "name": "click-app",
+  "version": "1.0.0",
+  "description": "Interview test app",
+  "main": "index.js",
+  "repository": "https://github.com/jQueryMike/click-app.git",
+  "author": "Mike Adams <mike.adams@gmx.co.uk>",
+  "license": "MIT",
+  "private": false
+}
