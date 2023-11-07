@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import Head from "next/head";
 import './globals.css'
 import Header from "@/components/sections/Header"
 import Footer from "@/components/sections/Footer"
@@ -14,9 +15,6 @@ export const metadata: Metadata = {
   authors: [{name: "Mike Adams"}],
   generator: "Next.js, React, Tailwind CSS",
   keywords: ['Click Dealer', 'App', 'Interview', 'Assessment'],
-  icons: {
-    icon: '/favicon-32x32.png',
-  },
   manifest: "/site.webmanifest",
 }
 
@@ -27,6 +25,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Head>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <body className={inter.className}>
         <div className="pb-16">
           <VehicleManagerContextProvider>
