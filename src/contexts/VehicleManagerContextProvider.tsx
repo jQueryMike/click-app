@@ -14,6 +14,9 @@ export const VehicleManagerContext = createContext<IVehicleManagerContext>({
   selectVehicle: () => {},
   deleteVehicle: () => {},
   updateVehicle: () => {},
+  clearVehicle: () => {},
+  updateVehicleField: () => {},
+  changesMade: false,
 });
 
 export const VehicleManagerContextProvider = ({ children } : Props) => {

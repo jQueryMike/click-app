@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import Image from "next/image";
 import { isImage, formatValue } from "@/utils/valueTypes";
 import { useVehicleManagerContext } from "@/contexts/VehicleManagerContextProvider";

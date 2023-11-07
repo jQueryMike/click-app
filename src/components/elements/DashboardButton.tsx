@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link'
+import React from "react";
+import Link from "next/link"
 
 const DashboardButton = ({ text = "[Dashboard Button]", navigatePath = "/"} : { text: string, navigatePath: string}): React.JSX.Element => {
     return (

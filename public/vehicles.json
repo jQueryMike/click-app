@@ -8,7 +8,6 @@
       "price": 12000,
       "mileage": 45000,
       "color": "Silver",
-      "fuel type": "petrol",
       "transmission": "Automatic",
       "location": "London, UK"
     },
@@ -20,7 +19,6 @@
       "price": 10000,
       "mileage": 55000,
       "color": "Blue",
-      "fuel type": "petrol",
       "transmission": "Automatic",
       "location": "Manchester, UK"
     },
@@ -32,7 +30,6 @@
       "price": 15000,
       "mileage": 40000,
       "color": "Red",
-      "fuel type": "diesel",
       "transmission": "Automatic",
       "location": "Birmingham, UK"
     },
@@ -44,7 +41,6 @@
       "price": 9000,
       "mileage": 65000,
       "color": "White",
-      "fuel type": "diesel",
       "transmission": "Automatic",
       "location": "Glasgow, UK"
     },
@@ -56,7 +52,6 @@
       "price": 16000,
       "mileage": 35000,
       "color": "Black",
-      "fuel type": "petrol",
       "transmission": "Automatic",
       "location": "Edinburgh, UK"
     },
@@ -68,7 +63,6 @@
       "price": 11000,
       "mileage": 60000,
       "color": "Silver",
-      "fuel type": "petrol",
       "transmission": "Automatic",
       "location": "Cardiff, UK"
     },
@@ -80,7 +74,6 @@
       "price": 10500,
       "mileage": 59000,
       "color": "Gray",
-      "fuel type": "diesel",
       "transmission": "Automatic",
       "location": "Belfast, UK"
     },
@@ -92,7 +85,6 @@
       "price": 9500,
       "mileage": 62000,
       "color": "Blue",
-      "fuel type": "petrol",
       "transmission": "Automatic",
       "location": "Cardiff, UK"
     },
@@ -104,7 +96,6 @@
       "price": 13000,
       "mileage": 54000,
       "color": "Green",
-      "fuel type": "diesel",
       "transmission": "Automatic",
       "location": "Glasgow, UK"
     },
@@ -116,7 +107,6 @@
       "price": 14000,
       "mileage": 48000,
       "color": "Red",
-      "fuel type": "petrol",
       "transmission": "Manual",
       "location": "London, UK"
     },
@@ -128,7 +118,6 @@
       "price": 11500,
       "mileage": 59000,
       "color": "White",
-      "fuel type": "petrol",
       "transmission": "Automatic",
       "location": "Birmingham, UK"
     },
@@ -140,7 +129,6 @@
       "price": 18000,
       "mileage": 42000,
       "color": "Black",
-      "fuel type": "diesel",
       "transmission": "Automatic",
       "location": "Manchester, UK"
     },
@@ -152,7 +140,6 @@
       "price": 15500,
       "mileage": 48000,
       "color": "Silver",
-      "fuel type": "diesel",
       "transmission": "Automatic",
       "location": "Edinburgh, UK"
     },
@@ -164,7 +151,6 @@
       "price": 16000,
       "mileage": 50000,
       "color": "Gray",
-      "fuel type": "petrol",
       "transmission": "Manual",
       "location": "Cardiff, UK"
     },
@@ -176,7 +162,6 @@
       "price": 17000,
       "mileage": 45000,
       "color": "Blue",
-      "fuel type": "diesel",
       "transmission": "Automatic",
       "location": "Belfast, UK"
     },
@@ -188,7 +173,6 @@
       "price": 14500,
       "mileage": 55000,
       "color": "Red",
-      "fuel type": "petrol",
       "transmission": "Automatic",
       "location": "London, UK"
     },
@@ -200,7 +184,6 @@
       "price": 19000,
       "mileage": 38000,
       "color": "Black",
-      "fuel type": "petrol",
       "transmission": "Automatic",
       "location": "Manchester, UK"
     },
@@ -212,7 +195,6 @@
       "price": 13000,
       "mileage": 42000,
       "color": "Blue",
-      "fuel type": "diesel",
       "transmission": "Manual",
       "location": "Birmingham, UK"
     },
@@ -224,7 +206,6 @@
       "price": 11000,
       "mileage": 46000,
       "color": "Gray",
-      "fuel type": "diesel",
       "transmission": "Automatic",
       "location": "Glasgow, UK"
     },
@@ -236,7 +217,6 @@
       "price": 9500,
       "mileage": 54000,
       "color": "Red",
-      "fuel type": "petrol",
       "transmission": "Automatic",
       "location": "Edinburgh, UK"
     },
@@ -248,7 +228,6 @@
       "price": 11500,
       "mileage": 43000,
       "color": "White",
-      "fuel type": "petrol",
       "transmission": "Automatic",
       "location": "Cardiff, UK"
     },
@@ -260,7 +239,6 @@
       "price": 8000,
       "mileage": 47000,
       "color": "Green",
-      "fuel type": "diesel",
       "transmission": "Manual",
       "location": "Belfast, UK"
     },
@@ -272,7 +250,6 @@
       "price": 14000,
       "mileage": 36000,
       "color": "Silver",
-      "fuel type": "diesel",
       "transmission": "Automatic",
       "location": "London, UK"
     },
@@ -284,7 +261,6 @@
       "price": 9500,
       "mileage": 52000,
       "color": "Blue",
-      "fuel type": "petrol",
       "transmission": "Automatic",
       "location": "Manchester, UK"
     }

@@ -6,7 +6,6 @@ type Vehicle = {
     price: number,
     mileage: number,
     color: string,
-    fuel_type: string,
     transmission: string,
     location: string,
     image: string
@@ -34,5 +33,8 @@ interface IVehicleManagerContext {
     createVehicle: (vehicle: Vehicle) => void,
     selectVehicle: (uuid: string) => void,
     deleteVehicle: (uuid: string) => void,
-    updateVehicle: (vehicle: Vehicle) => void,
+    updateVehicle: () => void,
+    clearVehicle: () => void,
+    updateVehicleField: (field: string, value: string | number) => void,
+    changesMade: boolean,
 }

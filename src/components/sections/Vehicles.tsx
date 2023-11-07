@@ -1,16 +1,21 @@
 "use client";
-import React from 'react';
+import React from "react";
 import DataTable from "@/components/elements/DataTable";
 import VehicleManagerPanel from "@/components/elements/VehicleManagerPanel";
 import { useVehicleManagerContext } from "@/contexts/VehicleManagerContextProvider";
 import Link from "next/link";
 
 const Vehicles = ({ data = []}: { data: Array<Vehicle>}) => {
-    const { setManagerOpen, setVehicles, vehicles, selectedVehicle } = useVehicleManagerContext();
+    const { setManagerOpen, setVehicles, vehicles, selectedVehicle, clearVehicle } = useVehicleManagerContext();
 
     React.useEffect(() => {
         setVehicles(data);
     }, [data, setVehicles]);
+
+    const addNewVehicle = () => {
+        clearVehicle();
+        setManagerOpen(true);
+    }
 
     return (
         <div className="px-4 sm:px-6 lg:px-8">
@@ -25,7 +30,7 @@ const Vehicles = ({ data = []}: { data: Array<Vehicle>}) => {
                     <button
                         type="button"
                         className="block rounded-md bg-orange-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600 mr-2 mb-2"
-                        onClick={() => setManagerOpen(true)}
+                        onClick={addNewVehicle}
                     >
                         Add Vehicle
                     </button>
@@ -38,7 +43,7 @@ const Vehicles = ({ data = []}: { data: Array<Vehicle>}) => {
                 </div>
             </div>
             <div className="mt-8 flow-root">  
-                <VehicleManagerPanel item={selectedVehicle} />
+                <VehicleManagerPanel />
                 <div className="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
                     <div className="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
                         <DataTable data={vehicles} />
