@@ -64,8 +64,10 @@ const VehicleForm = ({ confirmDelete = () => { } }: { confirmDelete: () => void 
             <div className="fixed bottom-0 flex">
                 <button
                     type="button"
-                    className="block rounded-md bg-orange-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600 mr-2 mb-2"
+                    className={`block rounded-md bg-orange-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600 mr-2 mb-2 ${creatingNewVehicle && "bg-gray-200 cursor-not-allowed hover:bg-gray-200"}`}
                     onClick={confirmDelete}
+                    disabled={creatingNewVehicle}
+                    aria-disabled={creatingNewVehicle}
                 >
                     Delete
                 </button>
@@ -73,7 +75,7 @@ const VehicleForm = ({ confirmDelete = () => { } }: { confirmDelete: () => void 
                     <button
                         aria-disabled={!changesMade}
                         type="submit"
-                        className="block rounded-md bg-orange-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600 mr-2 mb-2 disabled:bg-gray-00"
+                        className={`block rounded-md bg-orange-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600 mr-2 mb-2 ${!changesMade && "bg-gray-200 cursor-not-allowed hover:bg-gray-200"}`}
                         disabled={!changesMade}
 
                     >
