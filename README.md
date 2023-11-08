@@ -9,7 +9,7 @@ I would look to replace json file data with an API call to a data endpoint and s
 Use ISR (Incremental Static Regeneration) to pregenerate individual vehicle pages that could be regenerated only on vehicle field change.
 
 ### favicon.ico
-Time was spent to fix the favicon, currently it is not resolving, more time is needed but considered low priority.
+~~Time was spent to fix the favicon, currently it is not resolving, more time is needed but considered low priority.~~ - Fixed
 
 ### Audit Log
 State is initialised and populated that holds a history of actions that take place on vehicle data, this is currently logged to the console on change. With more time this would be utilised to show notifications after crud actions and displayed as a feature within a separate table in the app.
