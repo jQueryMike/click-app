@@ -1,4 +1,5 @@
 type Vehicle = {
+    [key: string]: string | number | undefined;
     uuid: string,
     make: string,
     model: string,
@@ -8,8 +9,12 @@ type Vehicle = {
     color: string,
     transmission: string,
     location: string,
-    image: string
 }
+
+interface Vehicle {
+    [key: string]: string | number | undefined;
+    // other properties here
+  }
 
 type AuditHistory = {
     timestamp: string,
@@ -30,11 +35,23 @@ interface IVehicleManagerContext {
     auditHistory: AuditHistory[] | never[],
     setAuditHistory: Dispatch<SetStateAction<AuditHistory[] | never[]>>,
     selectedVehicle: Vehicle | null | undefined,
-    createVehicle: (vehicle: Vehicle) => void,
+    createVehicle: () => void,
     selectVehicle: (uuid: string) => void,
     deleteVehicle: (uuid: string) => void,
     updateVehicle: () => void,
     clearVehicle: () => void,
     updateVehicleField: (field: string, value: string | number) => void,
     changesMade: boolean,
+    isFieldValid: (field: string) => { valid: boolean, message: string },
+    creatingNewVehicle: boolean,
+}
+
+interface Validation {
+    required: boolean;
+    maxLength: number;
+    message: string;
+}
+
+interface VehicleValidation {
+    [ key: string ]: Validation;
 }

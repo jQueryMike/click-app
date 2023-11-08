@@ -1,7 +1,7 @@
 import React from "react";
 import { v4 as uuidv4 } from "uuid";
 
-const INITIAL_VEHICLE_STATE = {
+export const INITIAL_VEHICLE_STATE = {
   uuid: uuidv4(),
   make: "",
   model: "",
@@ -11,8 +11,51 @@ const INITIAL_VEHICLE_STATE = {
   color: "",
   transmission: "",
   location: "",
-  image: "",
 };
+
+const VEHICLE_VALIDATION: VehicleValidation = {
+  make: {
+    required: true,
+    maxLength: 20,
+    message: "Please provide a valid vehicle make.",
+  },
+  model: {
+    required: true,
+    maxLength: 20,
+    message: "Please provide a valid vehicle model.",
+  },
+  year: {
+    required: true,
+    maxLength: 4,
+    message: "Please provide a valid vehicle year.",
+  },
+  price: {
+    required: true,
+    maxLength: 6,
+    message: "Please provide a valid vehicle price.",
+  },
+  mileage: {
+    required: true,
+    maxLength: 6,
+    message: "Please provide a valid vehicle mileage.",
+  },
+  color: {
+    required: true,
+    maxLength: 20,
+    message: "Please provide a valid vehicle color.",
+  },
+  transmission: {
+    required: true,
+    maxLength: 20,
+    message: "Please provide a valid vehicle transmission.",
+  },
+  location: {
+    required: true,
+    maxLength: 20,
+    message: "Please provide a valid vehicle location.",
+  },
+};
+
 
 export const useVehicleManager = () => {
   const [ managerOpen, setManagerOpen ] = React.useState(false);
@@ -48,6 +91,18 @@ export const useVehicleManager = () => {
     setSelectedVehicle(newVehicle);
   }
 
+  const isFieldValid = (field: string) => {
+    const fieldValidation = VEHICLE_VALIDATION[ field ];
+    const fieldValue = selectedVehicle[ field ];
+    if (fieldValidation.required && !fieldValue) {
+      return {valid: false, message: fieldValidation.message};
+    }
+    if (fieldValidation.maxLength && fieldValue!.toString().length > fieldValidation.maxLength) {
+      return {valid: false, message: fieldValidation.message};;
+    }
+    return {valid: true, message: ""};
+  }
+
   const selectVehicle = (uuid: string) => {
     const vehicle = vehicles.find((vehicle) => vehicle.uuid === uuid);
     setSelectedVehicle(vehicle!);
@@ -63,10 +118,11 @@ export const useVehicleManager = () => {
     createAuditEntry(vehicle, "Deleted vehicle");
   }
 
-  const createVehicle = (vehicle: Vehicle) => {
-    const newVehicles = [ ...vehicles, vehicle ];
+  const createVehicle = () => {
+    const newVehicles = [ ...vehicles, selectedVehicle ];
     setVehicles(newVehicles);
-    createAuditEntry(vehicle, "Created vehicle");
+    setManagerOpen(false);
+    createAuditEntry(selectedVehicle, "Created vehicle");
   }
 
   const updateVehicle = () => {
@@ -77,6 +133,7 @@ export const useVehicleManager = () => {
       return v;
     });
     setVehicles(newVehicles);
+    setManagerOpen(false);
     createAuditEntry(selectedVehicle, "Updated vehicle");
   }
 
@@ -95,5 +152,7 @@ export const useVehicleManager = () => {
     clearVehicle,
     updateVehicleField,
     changesMade,
+    isFieldValid,
+    creatingNewVehicle
   };
 };

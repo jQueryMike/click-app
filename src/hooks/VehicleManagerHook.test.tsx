@@ -1,5 +1,5 @@
 import { renderHook } from '@testing-library/react'
-import { useVehicleManager } from "./VehicleManagerHook";
+import { useVehicleManager, INITIAL_VEHICLE_STATE } from "./VehicleManagerHook";
 
 let renderedHook: any;
 
@@ -40,7 +40,7 @@ describe("VehicleManagerHook", () => {
 
     it("should return a selectedVehicle state", () => {
         const { selectedVehicle } = renderedHook.result.current;
-        expect(selectedVehicle).toBe(null);
+        expect(selectedVehicle).toBe(INITIAL_VEHICLE_STATE);
     });
 
     it("should return a selectVehicle function", () => {
